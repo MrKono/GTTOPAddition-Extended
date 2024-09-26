@@ -8,6 +8,8 @@ import gregtech.GTInternalTags;
 
 import gregicality.multiblocks.GregicalityMultiblocks;
 
+import kono.ceu.gttopaextended.integration.top.TOPIntegration;
+
 import keqing.gttopaddition.GTTOPAddition;
 
 @Mod(modid = Tags.MODID,
@@ -22,5 +24,7 @@ public class GTTOPAdditionExtended {
     public static GTTOPAdditionExtended instance;
 
     @EventHandler
-    public void init(FMLInitializationEvent event) {}
+    public void init(FMLInitializationEvent event) {
+        TOPIntegration.init();
+    }
 }
