@@ -20,7 +20,6 @@ import kono.ceu.gttopaextended.Tags;
 import mcjty.theoneprobe.api.*;
 
 public class ComputationProvider implements IProbeInfoProvider {
-    ;
 
     @Override
     public String getID() {

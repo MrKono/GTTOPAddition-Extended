@@ -17,8 +17,6 @@ import mcjty.theoneprobe.apiimpl.elements.ElementProgress;
 
 public class FusionReactorProvider extends ElectricContainerInfoProvider {
 
-    private IEnergyContainer container;
-
     protected void addProbeInfo(@NotNull IEnergyContainer capability, @NotNull IProbeInfo probeInfo,
                                 EntityPlayer player, @NotNull TileEntity tileEntity, @NotNull IProbeHitData data) {
         super.addProbeInfo(capability, probeInfo, player, tileEntity, data);
