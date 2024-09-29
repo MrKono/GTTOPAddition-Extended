@@ -26,7 +26,7 @@ public class PowerSubStationProvider implements IProbeInfoProvider {
 
     @Override
     public String getID() {
-        return Tags.MODID + "gt_pss";
+        return Tags.MODID + ":gt_pss";
     }
 
     @Override
@@ -45,7 +45,7 @@ public class PowerSubStationProvider implements IProbeInfoProvider {
                     info.progress(stored, capacity, info.defaultProgressStyle()
                             .numberFormat(
                                     player.isSneaking() || stored < 10000 ? NumberFormat.FULL : NumberFormat.COMPACT)
-                            .suffix(" / " + (player.isSneaking() || capacity < 10000 ? capacity + " EU" :
+                            .suffix(" / " + (isCtrlDown() || capacity < 10000 ? capacity + " EU" :
                                     ElementProgress.format(capacity, NumberFormat.COMPACT, "EU")))
                             .filledColor(0xFFEEE600)
                             .alternateFilledColor(0xFFEEE600)
@@ -106,7 +106,6 @@ public class PowerSubStationProvider implements IProbeInfoProvider {
                 suffixIndex++;
             }
         }
-
         return df.format(displayValue) + " " + suffixes[suffixIndex];
     }
 }
