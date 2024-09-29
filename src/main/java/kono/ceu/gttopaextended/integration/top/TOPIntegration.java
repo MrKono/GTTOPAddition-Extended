@@ -16,6 +16,7 @@ public class TOPIntegration {
         ITheOneProbe probe = TheOneProbe.theOneProbeImp;
         probe.registerProvider(new PowerSubStationProvider());
         probe.registerProvider(new FusionReactorProvider());
+        probe.registerProvider(new ComputationProvider());
 
         if (Loader.isModLoaded(GregicalityMultiblocks.MODID)) {
             probe.registerProvider(new TemperatureProvider());
