@@ -1,9 +1,6 @@
 package kono.ceu.gttopaextended.integration.top;
 
-import net.minecraftforge.fml.common.Loader;
-
-import gregicality.multiblocks.GregicalityMultiblocks;
-
+import kono.ceu.gttopaextended.api.Mods;
 import kono.ceu.gttopaextended.integration.top.gcym.*;
 import kono.ceu.gttopaextended.integration.top.gregtech.*;
 
@@ -14,11 +11,12 @@ public class TOPIntegration {
 
     public static void init() {
         ITheOneProbe probe = TheOneProbe.theOneProbeImp;
-        probe.registerProvider(new PowerSubStationProvider());
         probe.registerProvider(new FusionReactorProvider());
         probe.registerProvider(new ComputationProvider());
+        probe.registerProvider(new CleanroomProvider());
+        probe.registerProvider(new PowerSubStationProvider());
 
-        if (Loader.isModLoaded(GregicalityMultiblocks.MODID)) {
+        if (Mods.GregicalityMultiblocks.isModLoaded()) {
             probe.registerProvider(new TemperatureProvider());
         }
     }
