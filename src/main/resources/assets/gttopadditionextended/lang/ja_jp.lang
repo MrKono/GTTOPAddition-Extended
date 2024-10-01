@@ -1,5 +1,6 @@
 ## Power Sub Station
-pss.IO=平均入出力:
+gttopadditionextendedpss.IO=平均入出力:
+gttopadditionextended.pss.details=詳細: %s
 
 ## Fusion Reactor
-fusion_reactor.heat=熱:
+gttopadditionextendedfusion_reactor.heat=熱:

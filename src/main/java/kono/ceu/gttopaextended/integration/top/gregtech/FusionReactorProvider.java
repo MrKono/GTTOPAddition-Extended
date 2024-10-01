@@ -26,7 +26,7 @@ public class FusionReactorProvider extends ElectricContainerInfoProvider {
                     ((MetaTileEntityFusionReactor) metaTileEntity).isStructureFormed()) {
                 long heat = ((MetaTileEntityFusionReactor) metaTileEntity).getHeat();
                 long capacity = capability.getEnergyCapacity();
-                probeInfo.text(TextFormatting.RED + "{*fusion_reactor.heat*}");
+                probeInfo.text(TextFormatting.RED + "{*gttopadditionextended.fusion_reactor.heat*}");
                 probeInfo.progress(heat, capacity, probeInfo.defaultProgressStyle()
                         .numberFormat(
                                 player.isSneaking() || heat < 10000 ? NumberFormat.FULL : NumberFormat.COMPACT)

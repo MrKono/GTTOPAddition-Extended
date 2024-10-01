@@ -1,5 +1,6 @@
 ## Power Sub Station
-pss.IO=Average IO:
+gttopadditionextended.pss.IO=Average IO:
+gttopadditionextended.pss.details=Details: %s
 
 ## Fusion Reactor
-fusion_reactor.heat=Heat:
+gttopadditionextended.fusion_reactor.heat=Heat:
