@@ -28,6 +28,7 @@ public enum Mods {
     GregTech(Names.GREGTECH),
     GTTOPAddition(Names.GT_TOP_ADDITION),
     GTTOPAdditionExtended(Names.GTTOPAEXTENDED),
+    MixinBooter(Names.MIXINBOOTER),
     TOPAddons(Names.TOP_ADDONS),
     Vanilla(Names.VANILLA),
 
@@ -56,6 +57,7 @@ public enum Mods {
         public static final String GREGTECH = "gregtech";
         public static final String GT_TOP_ADDITION = "gttopaddition";
         public static final String GTTOPAEXTENDED = Tags.MODID;
+        public static final String MIXINBOOTER = "mixinbooter";
         public static final String TOP_ADDONS = "topaddons";
         public static final String VANILLA = "minecraft";
     }
