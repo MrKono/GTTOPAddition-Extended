@@ -41,7 +41,7 @@ dependencies {
 
     // Hard Dependencies
     devOnlyNonPublishable(rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:5519022")) // CEu 2.8.10
-    devOnlyNonPublishable(rfg.deobf("curse.maven:gt-top-addition-1075373:5733375"))
+    devOnlyNonPublishable(rfg.deobf("curse.maven:gt-top-addition-1075373:5772864"))
 
     // Soft Dependencies
     api("codechicken:codechickenlib:3.2.3.358") // CCL 3.2.3.358
