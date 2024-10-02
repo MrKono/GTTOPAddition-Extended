@@ -4,3 +4,6 @@ gttopadditionextended.pss.details=Details: %s
 
 ## Fusion Reactor
 gttopadditionextended.fusion_reactor.heat=Heat:
+
+## Cleanroom
+gttopadditionextended.clean=CLEAN!!
