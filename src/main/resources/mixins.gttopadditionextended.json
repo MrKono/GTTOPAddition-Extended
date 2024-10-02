@@ -1,0 +1,12 @@
+{
+  "package": "kono.ceu.gttopaextended.mixin",
+  "refmap": "mixins.gttopadditionextended.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MultiblockPSSProviderMixin"
+  ],
+  "client": [],
+  "server": []
+}

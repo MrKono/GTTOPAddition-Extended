@@ -14,8 +14,7 @@ import kono.ceu.gttopaextended.integration.top.TOPIntegration;
      version = Tags.VERSION,
      name = Tags.MODNAME,
      acceptedMinecraftVersions = "[1.12.2]",
-     dependencies = GTInternalTags.DEP_VERSION_STRING + "required-after:" + Mods.Names.GT_TOP_ADDITION + ";" +
-             "after:" + Mods.Names.GREGICALITY_MULTIBLOCKS + ";")
+     dependencies = GTInternalTags.DEP_VERSION_STRING + "required-after:" + Mods.Names.GT_TOP_ADDITION + ";")
 public class GTTOPAdditionExtended {
 
     @Mod.Instance

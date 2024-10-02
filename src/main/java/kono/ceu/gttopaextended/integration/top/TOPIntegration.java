@@ -1,7 +1,5 @@
 package kono.ceu.gttopaextended.integration.top;
 
-import kono.ceu.gttopaextended.api.Mods;
-import kono.ceu.gttopaextended.integration.top.gcym.*;
 import kono.ceu.gttopaextended.integration.top.gregtech.*;
 
 import mcjty.theoneprobe.TheOneProbe;
@@ -15,9 +13,5 @@ public class TOPIntegration {
         probe.registerProvider(new ComputationProvider());
         probe.registerProvider(new CleanroomProvider());
         probe.registerProvider(new PowerSubStationProvider());
-
-        if (Mods.GregicalityMultiblocks.isModLoaded()) {
-            probe.registerProvider(new TemperatureProvider());
-        }
     }
 }
