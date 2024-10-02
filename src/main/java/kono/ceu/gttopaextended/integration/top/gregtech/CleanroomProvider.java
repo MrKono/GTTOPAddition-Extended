@@ -58,7 +58,7 @@ public class CleanroomProvider implements IProbeInfoProvider {
                     if (provider.checkCleanroomType(CleanroomType.CLEANROOM) ||
                             provider.checkCleanroomType(CleanroomType.STERILE_CLEANROOM)) {
                         horizontal.text(
-                                TextStyleClass.INFO + "" + TextFormatting.GREEN + "{*gttopadditionextended.clean*}");
+                                TextStyleClass.INFO + "" + TextFormatting.AQUA + "{*gttopadditionextended.clean*}");
                     }
                 }
             }

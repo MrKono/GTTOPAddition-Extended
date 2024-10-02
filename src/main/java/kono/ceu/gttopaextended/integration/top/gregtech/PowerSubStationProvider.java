@@ -63,8 +63,9 @@ public class PowerSubStationProvider implements IProbeInfoProvider {
                             TextFormatting.WHITE,
                             "gregtech.multiblock.power_substation.stored",
                             TextComponentUtil.stringWithColor(
-                                    TextFormatting.YELLOW,
-                                    isCtrlDown() ? ((MetaTileEntityPowerSubstation) metaTileEntity).getStored() :
+                                    TextFormatting.WHITE,
+                                    isCtrlDown() ?
+                                            ((MetaTileEntityPowerSubstation) metaTileEntity).getStored() + " EU" :
                                             formatNumber(stored) + "EU"));
                     info.text(storedS.getFormattedText());
 
@@ -72,8 +73,9 @@ public class PowerSubStationProvider implements IProbeInfoProvider {
                             TextFormatting.WHITE,
                             "gregtech.multiblock.power_substation.capacity",
                             TextComponentUtil.stringWithColor(
-                                    TextFormatting.GREEN,
-                                    isCtrlDown() ? ((MetaTileEntityPowerSubstation) metaTileEntity).getCapacity() :
+                                    TextFormatting.WHITE,
+                                    isCtrlDown() ?
+                                            ((MetaTileEntityPowerSubstation) metaTileEntity).getCapacity() + " EU" :
                                             formatNumber(capacity) + "EU"));
                     info.text(capacityS.getFormattedText());
 
@@ -83,7 +85,7 @@ public class PowerSubStationProvider implements IProbeInfoProvider {
                     long passive = ((MetaTileEntityPowerSubstation) metaTileEntity).getPassiveDrain();
                     long io = in - out;
 
-                    info.text(TextFormatting.AQUA + "{*gttopadditionextended.pss.IO*}" + " " +
+                    info.text(TextFormatting.WHITE + "{*gttopadditionextended.pss.IO*}" + " " +
                             (io > 0 ? TextFormatting.GREEN : TextFormatting.RED) +
                             (isCtrlDown() ? TextFormattingUtil.formatNumbers(io) : formatNumber(io)) +
                             "EU/t");
