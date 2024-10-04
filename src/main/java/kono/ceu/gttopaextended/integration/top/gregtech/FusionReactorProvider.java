@@ -1,5 +1,6 @@
 package kono.ceu.gttopaextended.integration.top.gregtech;
 
+import kono.ceu.gttopaextended.Tags;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.text.TextFormatting;
@@ -16,6 +17,11 @@ import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.elements.ElementProgress;
 
 public class FusionReactorProvider extends ElectricContainerInfoProvider {
+
+    @Override
+    public String getID() {
+        return Tags.MODID + ":gt_fusion_reactor";
+    }
 
     protected void addProbeInfo(@NotNull IEnergyContainer capability, @NotNull IProbeInfo probeInfo,
                                 EntityPlayer player, @NotNull TileEntity tileEntity, @NotNull IProbeHitData data) {
