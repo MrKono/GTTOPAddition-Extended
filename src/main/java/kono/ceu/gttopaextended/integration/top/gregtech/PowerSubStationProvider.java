@@ -18,6 +18,7 @@ import gregtech.api.util.TextComponentUtil;
 import gregtech.api.util.TextFormattingUtil;
 import gregtech.common.metatileentities.multi.electric.MetaTileEntityPowerSubstation;
 
+import kono.ceu.gttopaextended.GTTOPAdditionExtendedConfig;
 import kono.ceu.gttopaextended.Tags;
 
 import mcjty.theoneprobe.api.*;
@@ -33,6 +34,7 @@ public class PowerSubStationProvider implements IProbeInfoProvider {
     @Override
     public void addProbeInfo(ProbeMode mode, IProbeInfo info, EntityPlayer player, World world,
                              IBlockState state, IProbeHitData data) {
+        if (!GTTOPAdditionExtendedConfig.pss.displayBigInteger) return;
         if (state.getBlock().hasTileEntity(state)) {
             TileEntity tileEntity = world.getTileEntity(data.getPos());
             if (tileEntity instanceof IGregTechTileEntity) {
@@ -89,7 +91,7 @@ public class PowerSubStationProvider implements IProbeInfoProvider {
                             (io > 0 ? TextFormatting.GREEN : TextFormatting.RED) +
                             (isCtrlDown() ? TextFormattingUtil.formatNumbers(io) : formatNumber(io)) +
                             "EU/t");
-
+                    if (!GTTOPAdditionExtendedConfig.pss.displayMore) return;
                     if (player.isSneaking()) {
                         ITextComponent averageIn = TextComponentUtil.translationWithColor(
                                 TextFormatting.GREEN,

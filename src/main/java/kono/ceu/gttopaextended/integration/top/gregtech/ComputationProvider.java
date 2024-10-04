@@ -15,6 +15,7 @@ import gregtech.common.metatileentities.multi.electric.MetaTileEntityHPCA;
 import gregtech.common.metatileentities.multi.electric.MetaTileEntityNetworkSwitch;
 import gregtech.common.metatileentities.multi.electric.MetaTileEntityResearchStation;
 
+import kono.ceu.gttopaextended.GTTOPAdditionExtendedConfig;
 import kono.ceu.gttopaextended.Tags;
 
 import mcjty.theoneprobe.api.*;
@@ -29,6 +30,7 @@ public class ComputationProvider implements IProbeInfoProvider {
     @Override
     public void addProbeInfo(ProbeMode mode, IProbeInfo info, EntityPlayer player, World world,
                              IBlockState state, IProbeHitData data) {
+        if (!GTTOPAdditionExtendedConfig.comp.displayCWUt) return;
         if (state.getBlock().hasTileEntity(state)) {
             TileEntity tileEntity = world.getTileEntity(data.getPos());
             if (tileEntity instanceof IGregTechTileEntity) {

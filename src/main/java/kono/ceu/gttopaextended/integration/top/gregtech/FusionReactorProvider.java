@@ -1,5 +1,6 @@
 package kono.ceu.gttopaextended.integration.top.gregtech;
 
+import kono.ceu.gttopaextended.GTTOPAdditionExtendedConfig;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.text.TextFormatting;
@@ -34,6 +35,7 @@ public class FusionReactorProvider extends CapabilityInfoProvider<IEnergyContain
     @Override
     protected void addProbeInfo(@NotNull IEnergyContainer capability, @NotNull IProbeInfo info,
                                 EntityPlayer player, @NotNull TileEntity tileEntity, @NotNull IProbeHitData data) {
+        if (!GTTOPAdditionExtendedConfig.fusion.displayHeat) return;
         if (tileEntity instanceof IGregTechTileEntity) {
             MetaTileEntity metaTileEntity = ((IGregTechTileEntity) tileEntity).getMetaTileEntity();
             if (metaTileEntity instanceof MetaTileEntityFusionReactor &&

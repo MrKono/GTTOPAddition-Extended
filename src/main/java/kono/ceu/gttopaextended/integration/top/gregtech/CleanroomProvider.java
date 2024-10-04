@@ -21,6 +21,7 @@ import gregtech.common.metatileentities.multi.electric.MetaTileEntityFluidDrill;
 import gregtech.common.metatileentities.multi.electric.MetaTileEntityLargeMiner;
 import gregtech.common.metatileentities.multi.electric.centralmonitor.MetaTileEntityCentralMonitor;
 
+import kono.ceu.gttopaextended.GTTOPAdditionExtendedConfig;
 import kono.ceu.gttopaextended.Tags;
 
 import mcjty.theoneprobe.api.*;
@@ -36,7 +37,7 @@ public class CleanroomProvider implements IProbeInfoProvider {
     public void addProbeInfo(ProbeMode mode, IProbeInfo info, EntityPlayer player, World world,
                              IBlockState state, IProbeHitData data) {
         IProbeInfo horizontal = info.horizontal(info.defaultLayoutStyle().alignment(ElementAlignment.ALIGN_CENTER));
-
+        if (!GTTOPAdditionExtendedConfig.clean.displayClean) return;
         if (state.getBlock().hasTileEntity(state)) {
             TileEntity tileEntity = world.getTileEntity(data.getPos());
             if (tileEntity instanceof IGregTechTileEntity) {
